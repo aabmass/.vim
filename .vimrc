@@ -8,6 +8,14 @@ set expandtab
 inoremap { {<CR>}<Esc>O
 """""""" END my_edits
 
+"""""""" BEGIN YCM
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/ycm-confs/ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
+
+"""""""" END YCM
+
+
 """""""" Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
@@ -18,27 +26,6 @@ if !filereadable(vundle_readme)
     silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
     let iCanHazVundle=0
 endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-"Add your bundles here
-Bundle 'Syntastic' "uber awesome syntax and errors highlighter
-Bundle 'altercation/vim-colors-solarized' "T-H-E colorscheme
-Bundle 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
-"...All your other bundles...
-if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :BundleInstall
-endif
-"""""""" END Setting up Vundle - the vim plugin bundler end
-
-"""""""" BEGIN YCM
-
-let g:ycm_global_ycm_extra_conf = "~/.vim/ycm-confs/ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
-
-"""""""" END YCM
 
 """""""" BEGIN vundle
 set nocompatible              " be iMproved
@@ -86,6 +73,13 @@ Bundle 'qmake--syntax.vim'
 " Bundle 'delimitMate.vim'
 
 """""""" END my bundles
+
+if iCanHazVundle == 0
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :BundleInstall
+endif
+"""""""" END Setting up Vundle - the vim plugin bundler end
 
 
 if v:progname =~? "evim"

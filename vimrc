@@ -42,7 +42,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
+" Bundle 'tpope/vim-ails.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -65,7 +65,7 @@ filetype plugin indent on     " required!
 """""""" END vundle
 
 """""""" BEGIN my bundles
-
+Bundle 'plasticboy/vim-markdown'
 Bundle 'a.vim'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'qmake--syntax.vim'

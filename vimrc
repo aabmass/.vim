@@ -5,6 +5,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Inserts a closing curly bracket
 inoremap { {<CR>}<Esc>O
 """""""" END my_edits
 

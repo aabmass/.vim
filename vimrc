@@ -68,8 +68,8 @@ filetype plugin indent on     " required!
 Bundle 'plasticboy/vim-markdown'
 Bundle 'a.vim'
 Bundle 'DoxygenToolkit.vim'
+Bundle 'DoxyGen-Syntax'
 Bundle 'qmake--syntax.vim'
-
 " Bundle 'delimitMate.vim'
 
 """""""" END my bundles
@@ -79,8 +79,11 @@ if iCanHazVundle == 0
     echo ""
     :BundleInstall
 endif
-"""""""" END Setting up Vundle - the vim plugin bundler end
+"""""""" END Setting up Vundle - the vim plugin bundler
 
+"""""""" BEGIN syntax settings
+" For DoxyGen-sytnax
+let mysyntaxfile='~/.vim/doxygen_load.vim'
 
 if v:progname =~? "evim"
   finish

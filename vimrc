@@ -24,7 +24,7 @@ vmap <TAB> =
 
 " Select all with <c-a> in all modes
 nmap <c-a> ggvG 
-imap <c-a> ggvG 
+imap <c-a> <esc>ggvG 
 vmap <c-a> ggvG 
 
 """""""" END my_edits

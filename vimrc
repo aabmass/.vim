@@ -6,7 +6,27 @@ set shiftwidth=4
 set expandtab
 
 " Inserts a closing curly bracket
-inoremap { {<CR>}<Esc>O
+inoremap {<CR> {<CR>}<Esc>O
+
+" Local and global refactoring names; just call gr with the cursor on the name
+function! Refactor()
+    call inputsave()
+    let @z=input("What do you want to rename '" . @z . "' to? ")
+    call inputrestore()
+endfunction
+nmap gr "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/g<cr>`x
+
+" A shortcut mapping for a.vim to switch between header and source
+nmap aa :A!<CR>
+
+" Auto indent when tab is pressed in visual mode
+vmap <TAB> =
+
+" Select all with <c-a> in all modes
+nmap <c-a> ggvG 
+imap <c-a> ggvG 
+vmap <c-a> ggvG 
+
 """""""" END my_edits
 
 """""""" BEGIN YCM

@@ -27,6 +27,9 @@ nmap <c-a> ggvG
 imap <c-a> <esc>ggvG 
 vmap <c-a> ggvG 
 
+" Toggle Tagbar (majutsushi/tagbar) on and off
+nmap tt :TagbarToggle<CR>
+
 """""""" END my_edits
 
 """""""" BEGIN YCM
@@ -91,6 +94,7 @@ Bundle 'a.vim'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'DoxyGen-Syntax'
 Bundle 'qmake--syntax.vim'
+Bundle 'majutsushi/tagbar'
 " Bundle 'delimitMate.vim'
 
 """""""" END my bundles

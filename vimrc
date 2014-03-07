@@ -20,20 +20,23 @@ nmap gr "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/g<cr
 nmap aa :A!<CR>
 
 " Auto indent when tab is pressed in visual mode
-vmap <TAB> =
+vmap <Tab> =
 
 " Select all with <c-a> in all modes
-nmap <c-a> ggvG 
-imap <c-a> <esc>ggvG 
-vmap <c-a> ggvG 
+nmap <C-a> ggvG 
+imap <C-a> <esc>ggvG 
+vmap <C-a> ggvG 
 
 " Toggle Tagbar (majutsushi/tagbar) on and off
 nmap tt :TagbarToggle<CR>
 
+" Shift tab does an inverse tab
+nmap <S-Tab> <<
+imap <S-Tab> <C-o><<
+
 """""""" END my_edits
 
 """""""" BEGIN YCM
-
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycm-confs/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 
@@ -61,6 +64,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
 
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'

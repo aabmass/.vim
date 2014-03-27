@@ -1,5 +1,8 @@
 """""""" BEGIN my edits
 
+" Color theme
+color torte
+
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -33,6 +36,8 @@ nmap tt :TagbarToggle<CR>
 " Shift tab does an inverse tab
 nmap <S-Tab> <<
 imap <S-Tab> <C-o><<
+
+nnoremap ; :
 
 """""""" END my_edits
 

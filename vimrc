@@ -1,7 +1,7 @@
 """""""" BEGIN my edits
 
 " Color theme
-color torte
+color desert
 
 set smartindent
 set tabstop=4
@@ -40,6 +40,21 @@ imap <S-Tab> <C-o><<
 nnoremap ; :
 
 """""""" END my_edits
+
+"""""""" BEGIN ctags_additions
+
+" Support for css
+let g:tagbar_type_css = {
+\ 'ctagstype' : 'Css',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 's:selectors',
+        \ 'i:identities'
+    \ ]
+\ }
+
+"""""""" END ctags_additions
+
 
 """""""" BEGIN YCM
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycm-confs/ycm_extra_conf.py"
@@ -104,6 +119,7 @@ Bundle 'DoxygenToolkit.vim'
 Bundle 'DoxyGen-Syntax'
 Bundle 'qmake--syntax.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 " Bundle 'delimitMate.vim'
 
 """""""" END my bundles

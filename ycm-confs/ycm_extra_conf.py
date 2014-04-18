@@ -30,6 +30,17 @@
 
 import os
 import ycm_core
+import re
+import subprocess
+
+# Specify pkg-config targets to add to add cflags for
+pkgconfigTargets = []
+
+# Now generate the actual flags from pkg-config
+if (len(pkgconfigTargets) != 0):
+    pcFlags = str(subprocess.check_output(['pkg-config', '--cflags'] + pkgconfigTargets))
+    pcFlags = re.sub(r"(b\')|(\\n)|(\')", "", pcFlags);
+    pcFlags = pcFlags.split();
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
@@ -87,8 +98,11 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
 '-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
+'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'
 ]
+
+# Append our pkg-config generated flags
+flags = flags + pcFlags
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the

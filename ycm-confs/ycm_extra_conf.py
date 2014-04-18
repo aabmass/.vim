@@ -35,6 +35,7 @@ import subprocess
 
 # Specify pkg-config targets to add to add cflags for
 pkgconfigTargets = []
+pcFlags = []
 
 # Now generate the actual flags from pkg-config
 if (len(pkgconfigTargets) != 0):

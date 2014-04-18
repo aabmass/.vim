@@ -39,10 +39,13 @@ pkgconfigTargets = [
 'Qt5Widgets'
 ]
 
+pcFlags = []
+
 # Now generate the actual flags from pkg-config
-pcFlags = str(subprocess.check_output(['pkg-config', '--cflags'] + pkgconfigTargets))
-pcFlags = re.sub(r"(b\')|(\\n)|(\')", "", pcFlags);
-pcFlags = pcFlags.split();
+if (len(pkgconfigTargets) != 0):
+    pcFlags = str(subprocess.check_output(['pkg-config', '--cflags'] + pkgconfigTargets))
+    pcFlags = re.sub(r"(b\')|(\\n)|(\')", "", pcFlags);
+    pcFlags = pcFlags.split();
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).

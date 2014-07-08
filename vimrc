@@ -122,6 +122,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 " Bundle 'delimitMate.vim'
 
+Bundle 'tikhomirov/vim-glsl'
+
 """""""" END my bundles
 
 if iCanHazVundle == 0
@@ -219,3 +221,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" glsl syntax highlighting
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 

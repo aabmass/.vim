@@ -128,6 +128,11 @@ Bundle 'tikhomirov/vim-glsl'
 
 """""""" END my bundles
 
+"""""""" BEGIN Syntastic
+let g:syntastic_html_tidy_exec= "/usr/local/bin/tidy"
+
+"""""""" END Syntastic
+
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""

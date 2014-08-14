@@ -120,6 +120,8 @@ Bundle 'DoxyGen-Syntax'
 Bundle 'qmake--syntax.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'octol/vim-cpp-enhanced-highlight'
+Bundle 'MatchTag'
+Bundle 'Syntastic'
 " Bundle 'delimitMate.vim'
 
 Bundle 'tikhomirov/vim-glsl'

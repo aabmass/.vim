@@ -7,6 +7,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+" set foldmethod=indent
 
 " Inserts a closing curly bracket
 inoremap {<CR> {<CR>}<Esc>O
@@ -38,6 +39,12 @@ nmap <S-Tab> <<
 imap <S-Tab> <C-o><<
 
 nnoremap ; :
+
+" Fold tag (zfat) with ft
+nmap ft zfat
+
+" Copy the whole page into the "+ buffer
+nmap cc gg"+yG
 
 """""""" END my_edits
 

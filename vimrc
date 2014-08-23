@@ -43,8 +43,13 @@ nnoremap ; :
 " Fold tag (zfat) with ft
 nmap ft zfat
 
-" Copy the whole page into the "+ buffer
-nmap cc gg"+yG
+" Copy the whole buffer into the "+ register (system clipboard)
+" nmap cc gg"+yG
+nmap cc :%y+<Enter>
+
+" Copy/Paste quickly from system clipboard
+nmap <C-p> "+p
+imap <C-p> <ESC>"+pa
 
 """""""" END my_edits
 
@@ -129,6 +134,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'MatchTag'
 Bundle 'Syntastic'
+Bundle 'jQuery'
+Bundle 'rogeliog/Vim-Snippets'
+" Bundle 'JavaScript-syntax'
 " Bundle 'delimitMate.vim'
 
 Bundle 'tikhomirov/vim-glsl'

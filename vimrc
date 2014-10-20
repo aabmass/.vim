@@ -1,7 +1,16 @@
 """""""" BEGIN my edits
+" Change leader to ,
+let mapleader=','
+
+" Switch buffers with leader
+nnoremap <Leader>d :bnext!<CR>
+nnoremap <Leader>a :bprevious!<CR>
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
 
 " Color theme
 color desert
+highlight SignColumn ctermbg=darkgrey
 
 set smartindent
 set tabstop=4
@@ -38,7 +47,11 @@ nmap tt :TagbarToggle<CR>
 nmap <S-Tab> <<
 imap <S-Tab> <C-o><<
 
+" Easier to type ; than : for commands, but we still want ';' functionality
 nnoremap ; :
+nnoremap ,f ;
+nnoremap ,F ,
+
 
 " Fold tag (zfat) with ft
 nmap ft zfat
@@ -65,6 +78,16 @@ let g:tagbar_type_css = {
     \ ]
 \ }
 
+" A fix for javascript
+let g:tagbar_type_javascript = {
+    \ 'ctagstype' : 'JavaScript',
+    \ 'kinds'     : [
+        \ 'o:objects',
+        \ 'f:functions',
+        \ 'a:arrays',
+        \ 's:strings'
+    \ ]
+\ }
 """""""" END ctags_additions
 
 
@@ -95,63 +118,98 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'gmarik/vundle'
+Plugin 'Valloric/YouCompleteMe'
 
 " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-ails.git'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'tpope/vim-ails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " non-GitHub repos
-" Bundle 'git://git.wincent.com/command-t.git'
+" Plugin 'git://git.wincent.com/command-t.git'
 " Git repos on your local machine (i.e. when working on your own plugin)
-" Bundle 'file:///Users/gmarik/path/to/plugin'
+" Plugin 'file:///Users/gmarik/path/to/plugin'
 " ...
 
 filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
 """""""" END vundle
 
 """""""" BEGIN my bundles
-Bundle 'plasticboy/vim-markdown'
-Bundle 'a.vim'
-Bundle 'DoxygenToolkit.vim'
-Bundle 'DoxyGen-Syntax'
-Bundle 'qmake--syntax.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'MatchTag'
-Bundle 'Syntastic'
-Bundle 'jQuery'
-Bundle 'rogeliog/Vim-Snippets'
-" Bundle 'JavaScript-syntax'
-" Bundle 'delimitMate.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'a.vim'
+Plugin 'DoxygenToolkit.vim'
+Plugin 'DoxyGen-Syntax'
+Plugin 'qmake--syntax.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'beyondmarc/glsl.vim'
+Plugin 'MatchTag'
+Plugin 'Syntastic'
+Plugin 'rogeliog/Vim-Snippets'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'matthewsimo/angular-vim-snippets'
+Plugin 'burnettk/vim-angular'
+Plugin 'HTML5-Syntax-File'
+Plugin 'tpope/vim-ragtag'
+Plugin 'kien/ctrlp.vim'
+" Plugin 'wincent/command-t'
+Plugin 'airblade/vim-gitgutter'
+" Plugin 'closetag.vim'
+" Plugin 'HTML-AutoCloseTag'
+Plugin 'ap/vim-css-color'
+" Status bar
+Plugin 'bling/vim-airline'
+Plugin 'terryma/vim-multiple-cursors'
 
-Bundle 'tikhomirov/vim-glsl'
 
 """""""" END my bundles
+
+"""""""" BEGIN Ctrl-P
+" set wildignore+=*/tmp/*,*.so,*.swp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+" shortcut to start ctrlp. Corresponds to :e
+let g:ctrlp_map = '<Leader>e'
+let g:ctrlp_working_path_mode = 'ra'
+
+" Ctags navigation with CtrlP
+nnoremap <leader>t :CtrlPTag<cr>
+"""""""" END Ctrl-P
+
+"""""""" BEGIN airline (statusline)
+" Tabline shows buffer file
+let g:airline#extensions#tabline#enabled = 1
+
+" Just show the filename (no path) in the tab
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#branch#enabled = 1
+let g:airline_powerline_fonts = 1
+
+set laststatus=2
+"""""""" END airline (statusline)
 
 """""""" BEGIN Syntastic
 let g:syntastic_html_tidy_exec= "/usr/local/bin/tidy"
 
 """""""" END Syntastic
 
+"""""""" BEGIN Syntastic
+let g:used_javascript_libs = 'jquery,angularjs'
+"""""""" END Syntastic
+
 if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
+    echo "Installing Plugins, please ignore key map error messages"
     echo ""
-    :BundleInstall
+    :PluginInstall
 endif
 """""""" END Setting up Vundle - the vim plugin bundler
 
@@ -245,4 +303,4 @@ if !exists(":DiffOrig")
 endif
 
 " glsl syntax highlighting
-au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl 
+autocmd BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set ft=glsl

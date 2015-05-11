@@ -2,11 +2,19 @@
 " Change leader to ,
 let mapleader=','
 
+" Change localleader to '\'
+let maplocalleader = "\\"
+
+" Clear search without doing :set nohlsearch
+nnoremap <leader>/ :let @/ = ""<CR>
+
 " Switch buffers with leader
 nnoremap <Leader>d :bnext!<CR>
 nnoremap <Leader>a :bprevious!<CR>
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+" Close a buffer with leader
+nnoremap <leader>q :bd<CR>
 
 " Color theme
 color desert
@@ -17,6 +25,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 " set foldmethod=indent
+
+" redraw only when we need to -- faster macros
+set lazyredraw
 
 " Inserts a closing curly bracket
 inoremap {<CR> {<CR>}<Esc>O
@@ -92,6 +103,7 @@ let g:tagbar_type_javascript = {
 
 
 """""""" BEGIN YCM
+" let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycm-confs/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 
@@ -119,7 +131,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Plugin 'gmarik/vundle'
-Plugin 'Valloric/YouCompleteMe'
 
 " original repos on GitHub
 Plugin 'tpope/vim-fugitive'
@@ -140,7 +151,14 @@ filetype plugin indent on     " required!
 
 """""""" BEGIN my bundles
 Plugin 'plasticboy/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 Plugin 'a.vim'
+Plugin 'derekwyatt/vim-protodef'
+Plugin 'FSwitch'
 Plugin 'DoxygenToolkit.vim'
 Plugin 'DoxyGen-Syntax'
 Plugin 'qmake--syntax.vim'
@@ -155,19 +173,67 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'matthewsimo/angular-vim-snippets'
 Plugin 'burnettk/vim-angular'
 Plugin 'HTML5-Syntax-File'
+Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-ragtag'
 Plugin 'kien/ctrlp.vim'
 " Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'matchit.zip'
 " Plugin 'closetag.vim'
 " Plugin 'HTML-AutoCloseTag'
 Plugin 'ap/vim-css-color'
 " Status bar
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
 
-
+Plugin 'lervag/vim-latex'
 """""""" END my bundles
+
+"""""""" BEGIN ultisnips (and YCM)
+let g:UltiSnipsExpandTrigger       = "<c-tab>"
+let g:UltiSnipsJumpForwardTrigger  = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Enable tabbing through list of results
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+" Expand snippet or return
+let g:ulti_expand_res = 0
+function! Ulti_ExpandOrEnter()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res
+        return ''
+    else
+        return "\<return>"
+endfunction
+
+" Set <space> as primary trigger
+inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"""""""" END ultisnips 
+
+"""""""" BEGIN NERDTree 
+nnoremap <leader>n :NERDTreeToggle<CR>
+"""""""" END NERDTree
 
 """""""" BEGIN Ctrl-P
 " set wildignore+=*/tmp/*,*.so,*.swp
@@ -199,6 +265,8 @@ set laststatus=2
 
 """""""" BEGIN Syntastic
 let g:syntastic_html_tidy_exec= "/usr/local/bin/tidy"
+let g:syntastic_python_python_exec = '/usr/bin/python2'
+" let g:syntastic_python_checkers = ['pylint']
 
 """""""" END Syntastic
 

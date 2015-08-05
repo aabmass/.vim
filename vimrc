@@ -55,6 +55,11 @@ nmap <C-a> ggvG
 imap <C-a> <esc>ggvG 
 vmap <C-a> ggvG 
 
+
+" Paste and toggle paste nopaste
+nmap <C-q> :set paste<cr>a<C-r>+<esc>:set nopaste<cr>
+imap <C-q> <esc>:set paste<cr>a<C-r>+<esc>:set nopaste<cr>a
+
 " Toggle Tagbar (majutsushi/tagbar) on and off
 nmap tt :TagbarToggle<CR>
 
@@ -157,6 +162,7 @@ filetype plugin indent on     " required!
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
@@ -170,12 +176,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'MatchTag'
+Plugin 'Syntastic'
 Plugin 'rogeliog/Vim-Snippets'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'matthewsimo/angular-vim-snippets'
 Plugin 'burnettk/vim-angular'
 Plugin 'HTML5-Syntax-File'
+Bundle 'lepture/vim-jinja'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-ragtag'
 Plugin 'kien/ctrlp.vim'
@@ -378,3 +386,5 @@ endif
 
 " glsl syntax highlighting
 autocmd BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set ft=glsl
+" jinja
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja

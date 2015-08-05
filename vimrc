@@ -16,11 +16,15 @@ nnoremap <leader><leader> <c-^>
 " Close a buffer with leader
 nnoremap <leader>q :bd<CR>
 
+" remap ; to \ and , to |
+nnoremap \ ;
+nnoremap \| ,
+
 " Color theme
 color desert
 highlight SignColumn ctermbg=darkgrey
 
-set smartindent
+filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -166,7 +170,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'beyondmarc/glsl.vim'
 Plugin 'MatchTag'
-Plugin 'Syntastic'
 Plugin 'rogeliog/Vim-Snippets'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -186,8 +189,10 @@ Plugin 'ap/vim-css-color'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-
+Plugin 'scrooloose/syntastic'
 Plugin 'lervag/vim-latex'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'django.vim'
 """""""" END my bundles
 
 """""""" BEGIN ultisnips (and YCM)
@@ -265,8 +270,9 @@ set laststatus=2
 
 """""""" BEGIN Syntastic
 let g:syntastic_html_tidy_exec= "/usr/local/bin/tidy"
-let g:syntastic_python_python_exec = '/usr/bin/python2'
-" let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+" let g:syntastic_python_checkers = ['pyflakes'] " not sure if this works
+let g:syntastic_quiet_messages = { "type": "bad-continuation" }
 
 """""""" END Syntastic
 

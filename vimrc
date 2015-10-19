@@ -20,11 +20,37 @@ nnoremap <leader>q :bd<CR>
 nnoremap \ ;
 nnoremap \| ,
 
+" remap these to also center the frame on the line we come upon
+nnoremap N Nzz
+nnoremap n nzz
+nnoremap } }zz
+nnoremap { {zz
+
+" don't break words over lines
+set linebreak
+
+" use a separate directory for swap and backup files
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+
+" use case insensitive or sensitive search intelligently
+set smartcase
+
+" replace occurences in a substitution by default
+" this behavior can be escaped with /g -- it essentialls reverses
+" the default behavior, e.g. :%s/foo/bar/g is now :%s/foo/bar and vice verse
+" set gdefault
+
+" select blank space in block visual mode
+set virtualedit=block
+
+" search files more like a generic unix shell
+set wildmode=longest,list
+
 " Color theme
 color desert
 highlight SignColumn ctermbg=darkgrey
 
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -35,6 +61,9 @@ set lazyredraw
 
 " Inserts a closing curly bracket
 inoremap {<CR> {<CR>}<Esc>O
+
+" Inserts a closing parentheses
+inoremap (<CR> (<CR>)<Esc>i
 
 " Local and global refactoring names; just call gr with the cursor on the name
 function! Refactor()
@@ -51,10 +80,13 @@ nmap aa :A!<CR>
 vmap <Tab> =
 
 " Select all with <c-a> in all modes
-nmap <C-a> ggvG 
-imap <C-a> <esc>ggvG 
-vmap <C-a> ggvG 
+nmap <C-a> ggVG 
+imap <C-a> <esc>ggVG 
+vmap <C-a> ggVG 
 
+" Copy to system clipboard
+nmap <C-y> ggVG"+y
+imap <C-y> <esc>ggVG"+y''i
 
 " Paste and toggle paste nopaste
 nmap <C-q> :set paste<cr>a<C-r>+<esc>:set nopaste<cr>
@@ -79,10 +111,6 @@ nmap ft zfat
 " Copy the whole buffer into the "+ register (system clipboard)
 " nmap cc gg"+yG
 nmap cc :%y+<Enter>
-
-" Copy/Paste quickly from system clipboard
-nmap <C-p> "+p
-imap <C-p> <ESC>"+pa
 
 """""""" END my_edits
 
@@ -183,7 +211,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'matthewsimo/angular-vim-snippets'
 Plugin 'burnettk/vim-angular'
 Plugin 'HTML5-Syntax-File'
-Bundle 'lepture/vim-jinja'
+Plugin 'lepture/vim-jinja'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-ragtag'
 Plugin 'kien/ctrlp.vim'
@@ -201,7 +229,13 @@ Plugin 'scrooloose/syntastic'
 Plugin 'lervag/vim-latex'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'django.vim'
+
+Plugin 'mustache/vim-mustache-handlebars'
 """""""" END my bundles
+
+"""""""" BEGIN mustache config
+let g:mustache_abbreviations = 1
+"""""""" END mustache config
 
 """""""" BEGIN ultisnips (and YCM)
 let g:UltiSnipsExpandTrigger       = "<c-tab>"
@@ -349,6 +383,8 @@ if has("autocmd")
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
+  filetype off
+  filetype on
   filetype plugin indent on
 
   " Put these in an autocmd group, so that we can delete them easily.
@@ -386,5 +422,3 @@ endif
 
 " glsl syntax highlighting
 autocmd BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set ft=glsl
-" jinja
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja

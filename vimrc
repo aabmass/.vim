@@ -238,40 +238,21 @@ let g:mustache_abbreviations = 1
 """""""" END mustache config
 
 """""""" BEGIN ultisnips (and YCM)
-let g:UltiSnipsExpandTrigger       = "<c-tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" Enable tabbing through list of results
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
+" use these and let UltiSnips use <tab>
+"let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 
-au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
-" Expand snippet or return
-let g:ulti_expand_res = 0
-function! Ulti_ExpandOrEnter()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res
-        return ''
-    else
-        return "\<return>"
-endfunction
-
-" Set <space> as primary trigger
-inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"

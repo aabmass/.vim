@@ -195,6 +195,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'a.vim'
+Plugin 'tpope/vim-surround'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'FSwitch'
 Plugin 'DoxygenToolkit.vim'
@@ -226,7 +227,7 @@ Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'lervag/vim-latex'
+Plugin 'lervag/vimtex'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'django.vim'
 
@@ -240,13 +241,13 @@ let g:mustache_abbreviations = 1
 """""""" BEGIN ultisnips (and YCM)
 
 " use these and let UltiSnips use <tab>
-let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+let g:ycm_key_list_select_completion = ['<tab>', '<c-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<c-k>', '<Up>']
 
-let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger = "<c-l>"
 
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Or, forward and backward with tab and shift-tab
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -305,6 +306,11 @@ if iCanHazVundle == 0
     :PluginInstall
 endif
 """""""" END Setting up Vundle - the vim plugin bundler
+
+"""""""" BEGIN vimtex settings
+let g:vimtex_view_general_viewer= 'zathura'
+
+"""""""" END vimtex settings
 
 """""""" BEGIN syntax settings
 " For DoxyGen-sytnax

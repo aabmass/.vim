@@ -88,9 +88,11 @@ vmap <C-a> ggVG
 nmap <C-y> ggVG"+y
 imap <C-y> <esc>ggVG"+y''i
 
-" Paste and toggle paste nopaste
-nmap <C-q> :set paste<cr>a<C-r>+<esc>:set nopaste<cr>
-imap <C-q> <esc>:set paste<cr>a<C-r>+<esc>:set nopaste<cr>a
+"" Paste and toggle paste nopaste
+" let XON get through the terminal to vim
+silent !stty -ixon > /dev/null 2>/dev/null
+nmap <C-q> :set paste<cr>"+p:set nopaste<cr>
+imap <C-q> <esc><C-q>a
 
 " Toggle Tagbar (majutsushi/tagbar) on and off
 nmap tt :TagbarToggle<CR>

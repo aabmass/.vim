@@ -45,13 +45,19 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'terryma/vim-multiple-cursors'
 
+" colorschemes from vim scripts
+" downloads all/most of the colorschemes available
+" this may be excessively large!
+Plugin 'flazz/vim-colorschemes'
 
-
-
-" All of your Plugins must be added before the following line
+"""" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+""""""""""""""" Colorschemeing
+" colorscheme monokai-chris
+set background=dark    " Setting dark mode
+colorscheme gruvbox
 
 """"""""""""""" YCM Settings
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'

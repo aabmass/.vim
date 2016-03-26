@@ -45,19 +45,29 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'terryma/vim-multiple-cursors'
 
-" colorschemes from vim scripts
+" for fuzzy file searching
+Plugin 'ctrlpvim/ctrlp.vim'
+
+""""" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!
 Plugin 'flazz/vim-colorschemes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 """" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-""""""""""""""" Colorschemeing
+""""""""""""""" Themin' and Schemin'
 " colorscheme monokai-chris
 set background=dark    " Setting dark mode
 colorscheme gruvbox
+
+" set powerline fonts true
+" turn this off if the terminal doesn't support it
+let g:airline_powerline_fonts = 1
 
 """"""""""""""" YCM Settings
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
@@ -75,3 +85,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 " for more info on YCM and UltiSnips together, see:
 " http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
+
+""""""""""""""" GitGutter settings
+set updatetime=250

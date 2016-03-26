@@ -1,4 +1,4 @@
-""""""""""""""""""""""" general config
+"====================== General Config ==============================
 let mapleader=" "
 
 """ tab settings
@@ -13,3 +13,6 @@ set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces
 
+""" searching
+set ignorecase
+set smartcase

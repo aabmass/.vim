@@ -1,3 +1,7 @@
+"====================== Vundle Plugins ==============================
+" This file has the plugins to be loaded by vundle. The settings
+" for the plugins go in pluginsettings.vim
+
 """" Install plugins with vundle here
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'

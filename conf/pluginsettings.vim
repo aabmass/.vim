@@ -1,3 +1,7 @@
+"====================== Plugins Settings ==============================
+" This file has the plugins to be loaded by vundle. The settings
+" for the plugins go in conf/settingsplugins.vim
+
 """"""""""""""" Themin' and Schemin'
 " colorscheme monokai-chris
 set background=dark    " Setting dark mode
@@ -28,3 +32,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 """"""""""""""" GitGutter settings
 set updatetime=250
+"" don't set any mappings (this plugin uses <leader>)
+"let g:gitgutter_map_keys = 0

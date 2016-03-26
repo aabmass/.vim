@@ -1,8 +1,12 @@
-""""""""""""""""""""""" general config
+"====================== General Config ==============================
+" general settings for vim go in here
+" this doesn't include settings for plugins
 source ~/.vim/conf/settings.vim
+
+" mappings go in here
 source ~/.vim/conf/mappings.vim
 
-""""""""""""""""""""""" Vundle Setup
+"====================== Vundle Setup ==============================
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,10 +16,13 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+" load the plugins from this conf file
 source ~/.vim/conf/plugins.vim
 
 """" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"====================== Other setup ==============================
+" specific settings for plugins go in this file
 source ~/.vim/conf/pluginsettings.vim

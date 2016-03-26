@@ -3,9 +3,11 @@
 set background=dark    " Setting dark mode
 colorscheme gruvbox
 
+""" airline settings
 " set powerline fonts true
 " turn this off if the terminal doesn't support it
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""" YCM Settings
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'

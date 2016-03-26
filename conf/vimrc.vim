@@ -1,6 +1,6 @@
 """"""""""""""""""""""" general config
-source ~/.vim/conf/mappings.vim
 source ~/.vim/conf/settings.vim
+source ~/.vim/conf/mappings.vim
 
 """"""""""""""""""""""" Vundle Setup
 set nocompatible              " be iMproved, required

@@ -1,5 +1,5 @@
 "====================== General Config ==============================
-let mapleader=" "
+let mapleader="\\"
 
 """ tab settings
 set tabstop=4       " The width of a TAB is set to 4.

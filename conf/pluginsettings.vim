@@ -1,4 +1,4 @@
-"====================== Plugins Settings ==============================
+"====================== Plugin's Settings ==============================
 " This file has the plugins to be loaded by vundle. The settings
 " for the plugins go in conf/settingsplugins.vim
 
@@ -34,3 +34,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 set updatetime=250
 "" don't set any mappings (this plugin uses <leader>)
 "let g:gitgutter_map_keys = 0
+
+""""""""""""""" auto-pairs settings
+let g:AutoPairsFlyMode = 1

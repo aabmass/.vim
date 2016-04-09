@@ -2,3 +2,6 @@
 bundle/
 *.pyc
 *.swp
+
+.netrwhist
+vim.log

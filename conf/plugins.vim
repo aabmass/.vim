@@ -9,6 +9,12 @@ Plugin 'VundleVim/Vundle.vim'
 " base options from sensible
 Plugin 'tpope/vim-sensible'
 
+" auto close parenthesis, quotes, etc.
+Plugin 'jiangmiao/auto-pairs'
+
+" switch between header and source (c/c++)
+Plugin 'a.vim'
+
 " YCM completions
 Plugin 'Valloric/YouCompleteMe'
 
@@ -20,6 +26,9 @@ Plugin 'terryma/vim-multiple-cursors'
 
 " for fuzzy file searching
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" for LaTeX
+Plugin 'lervag/vimtex'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available

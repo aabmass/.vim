@@ -30,6 +30,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " for LaTeX
 Plugin 'lervag/vimtex'
 
+" for TypeScript
+Plugin 'leafgarland/typescript-vim'
+
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!

@@ -17,6 +17,7 @@ set expandtab       " Expand TABs to spaces
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype json setlocal ts=2 sts=2 sw=2
 
 """ searching
 set ignorecase

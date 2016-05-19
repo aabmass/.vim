@@ -19,6 +19,15 @@ Plugin 'a.vim'
 " YCM completions
 Plugin 'Valloric/YouCompleteMe'
 
+" Gutentags to generate tags on the go
+Plugin 'ludovicchabant/vim-gutentags'
+
+" tagbar
+Plugin 'majutsushi/tagbar'
+
+" Syntastic syntax checking
+Plugin 'scrooloose/syntastic'
+
 " snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -35,6 +44,9 @@ Plugin 'lervag/vimtex'
 " for TypeScript
 Plugin 'leafgarland/typescript-vim'
 
+" for javascript
+Plugin 'pangloss/vim-javascript'
+
 " for mustache templates (ember)
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -45,3 +57,4 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'fholgado/minibufexpl.vim'

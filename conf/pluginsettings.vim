@@ -11,9 +11,16 @@ colorscheme gruvbox
 " set powerline fonts true
 " turn this off if the terminal doesn't support it
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 """"""""""""""" CtrlP settings
+" enable these extensions. Still looking for a better way to ignore from .gitignore. 'autoignore' extension
+" still scans everything
+let g:ctrlp_extensions = ['buffertag', 'mixed', 'undo']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+" this makes it so opening multiple files just puts them all
+" in their own buffer, not splitting
 let g:ctrlp_open_multiple_files = 'ij'
 
 
@@ -41,3 +48,25 @@ set updatetime=250
 
 """"""""""""""" auto-pairs settings
 " let g:AutoPairsFlyMode = 1
+
+""""""""""""""" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" language specifics
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+
+""""""""""""""" javascript plugin settings
+let g:javascript_enable_domhtmlcss = 1
+
+""""""""""""""" Gutentags settings
+let g:gutentags_tagfile = ".tags"
+
+" don't worry, there are defaults (SCM's) in addition to these
+let g:gutentags_project_root = ['CMakeLists.txt', 'README.md', 'readme.md', 'LICENSE']

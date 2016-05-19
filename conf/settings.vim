@@ -22,3 +22,10 @@ autocmd Filetype json setlocal ts=2 sts=2 sw=2
 """ searching
 set ignorecase
 set smartcase
+
+""" line numbering
+set number
+set relativenumber
+
+" also, see the mappings for making gj and gk work with this
+

@@ -66,7 +66,9 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:javascript_enable_domhtmlcss = 1
 
 """"""""""""""" Gutentags settings
-let g:gutentags_tagfile = ".tags"
+" store all the tag files in this directory to avoid
+" creating tag files all over the fs
+let g:gutentags_cache_dir = '~/.cache/gutentags'
 
 " don't worry, there are defaults (SCM's) in addition to these
 let g:gutentags_project_root = ['CMakeLists.txt', 'README.md', 'readme.md', 'LICENSE']

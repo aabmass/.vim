@@ -22,3 +22,7 @@ nmap <leader>t :TagbarToggle<cr>
 " http://stackoverflow.com/questions/20975928/moving-the-cursor-through-long-soft-wrapped-lines-in-vim/21000307#21000307
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" argwrap mappings
+" w is for 'wrap'
+nnoremap <silent> <leader>w :ArgWrap<cr>

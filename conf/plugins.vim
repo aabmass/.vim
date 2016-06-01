@@ -38,6 +38,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
+" hard to explain this one, see github
+Plugin 'FooSoft/vim-argwrap'
+
 " for LaTeX
 Plugin 'lervag/vimtex'
 

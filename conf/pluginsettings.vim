@@ -33,6 +33,9 @@ let g:ycm_global_ycm_extra_conf = '/home/aaron/.vim/ycm-confs/ycm_extra_conf.py'
 " run malicious code
 let g:ycm_confirm_extra_conf = 0
 
+" work with neco-ghc haskell omnicompletion
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
 """"""""""""""" UltiSnips Settings
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
@@ -72,3 +75,8 @@ let g:gutentags_cache_dir = '~/.cache/gutentags'
 
 " don't worry, there are defaults (SCM's) in addition to these
 let g:gutentags_project_root = ['CMakeLists.txt', 'README.md', 'readme.md', 'LICENSE']
+
+""""""""""""""" neco-ghc Settings
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc

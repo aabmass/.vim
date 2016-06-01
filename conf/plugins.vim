@@ -53,6 +53,10 @@ Plugin 'pangloss/vim-javascript'
 " for mustache templates (ember)
 Plugin 'mustache/vim-mustache-handlebars'
 
+" for Haskell
+Plugin 'neovimhaskell/haskell-vim'  " syntax + indentation
+Plugin 'eagletmt/neco-ghc'          " autocompletion
+
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!

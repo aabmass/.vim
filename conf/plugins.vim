@@ -57,6 +57,9 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'neovimhaskell/haskell-vim'  " syntax + indentation
 Plugin 'eagletmt/neco-ghc'          " autocompletion
 
+" for java autocompletion
+Plugin 'artur-shaik/vim-javacomplete2'
+
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!

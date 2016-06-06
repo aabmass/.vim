@@ -36,6 +36,9 @@ let g:ycm_confirm_extra_conf = 0
 " work with neco-ghc haskell omnicompletion
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+""""""""""""""" vim-javacomplete2 Settings
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 """"""""""""""" UltiSnips Settings
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"

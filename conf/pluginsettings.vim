@@ -50,7 +50,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 """"""""""""""" GitGutter settings
 set updatetime=250
 "" don't set any mappings (this plugin uses <leader>)
-"let g:gitgutter_map_keys = 0
+" let g:gitgutter_map_keys = 0
+let g:gitgutter_eager=0
 
 """"""""""""""" auto-pairs settings
 " let g:AutoPairsFlyMode = 1
@@ -70,6 +71,8 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 """"""""""""""" javascript plugin settings
 let g:javascript_enable_domhtmlcss = 1
+" highlight jsx in regular .js files
+let g:jsx_ext_required = 0
 
 """"""""""""""" Gutentags settings
 " store all the tag files in this directory to avoid

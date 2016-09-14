@@ -29,3 +29,14 @@ set relativenumber
 
 " also, see the mappings for making gj and gk work with this
 
+""" use the mouse
+" Enable mouse use in all modes
+set mouse=a
+
+""" misc
+" this should speed up changing buffers?
+" https://github.com/neovim/neovim/issues/4524
+set hid
+
+" use visual bell instead of annoying one
+set vb

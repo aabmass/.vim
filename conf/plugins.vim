@@ -50,6 +50,9 @@ Plugin 'leafgarland/typescript-vim'
 " for javascript
 Plugin 'pangloss/vim-javascript'
 
+" for jsx in javascript
+Plugin 'mxw/vim-jsx'
+
 " for mustache templates (ember)
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -57,8 +60,14 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'neovimhaskell/haskell-vim'  " syntax + indentation
 Plugin 'eagletmt/neco-ghc'          " autocompletion
 
+" Open browser to view markdown when opening md file
+Plugin 'suan/vim-instant-markdown'
+
 " for java autocompletion
 Plugin 'artur-shaik/vim-javacomplete2'
+
+" scratchpad
+Plugin 'metakirby5/codi.vim'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available

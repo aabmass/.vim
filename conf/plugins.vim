@@ -66,8 +66,9 @@ Plugin 'suan/vim-instant-markdown'
 " for java autocompletion
 Plugin 'artur-shaik/vim-javacomplete2'
 
-" scratchpad
-Plugin 'metakirby5/codi.vim'
+" python stuff
+Plugin 'heavenshell/vim-pydocstring'
+Plugin 'klen/python-mode'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available

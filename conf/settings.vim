@@ -11,6 +11,8 @@ set shiftwidth=4    " Indents will have a width of 4
 
 set softtabstop=4   " Sets the number of columns for a TAB
 
+set textwidth=79    " break lines when 120 characters wide"
+
 set expandtab       " Expand TABs to spaces
 
 " specific tab settings for filetypes
@@ -40,3 +42,7 @@ set hid
 
 " use visual bell instead of annoying one
 set vb
+
+" fonts
+set guifont=Meslo\ LG\ M\ 11
+

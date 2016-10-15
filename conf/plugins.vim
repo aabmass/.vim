@@ -68,7 +68,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 
 " python stuff
 Plugin 'heavenshell/vim-pydocstring'
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available

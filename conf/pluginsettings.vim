@@ -4,8 +4,9 @@
 
 """"""""""""""" Themin' and Schemin'
 " colorscheme monokai-chris
-set background=dark    " Setting dark mode
-colorscheme gruvbox
+" set background=dark    " Setting dark mode
+" colorscheme gruvbox
+colorscheme Tomorrow-Night-Eighties
 
 """"""""""""""" airline settings
 " set powerline fonts true
@@ -86,3 +87,7 @@ let g:gutentags_project_root = ['CMakeLists.txt', 'README.md', 'readme.md', 'LIC
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+""""""""""""""" py-docstring settings
+" override default binding..
+nmap <silent> <C-_> <Plug>(pydocstring)

@@ -45,6 +45,9 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
+" autocmds for using snippets from other languages
+autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
+
 " for more info on YCM and UltiSnips together, see:
 " http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
 

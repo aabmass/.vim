@@ -46,3 +46,5 @@ set vb
 " fonts
 set guifont=Meslo\ LG\ M\ 11
 
+" some file watchers (webpack) don't detect changes unless this is set
+set backupcopy=yes

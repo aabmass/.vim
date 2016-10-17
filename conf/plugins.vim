@@ -26,7 +26,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'majutsushi/tagbar'
 
 " Syntastic syntax checking
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 
 " snippets
 Plugin 'SirVer/ultisnips'

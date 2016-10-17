@@ -4,9 +4,9 @@
 
 """"""""""""""" Themin' and Schemin'
 " colorscheme monokai-chris
-" set background=dark    " Setting dark mode
-" colorscheme gruvbox
-colorscheme Tomorrow-Night-Eighties
+set background=dark    " Setting dark mode
+colorscheme gruvbox
+" colorscheme Tomorrow-Night-Eighties
 
 """"""""""""""" airline settings
 " set powerline fonts true
@@ -26,8 +26,11 @@ let g:ctrlp_open_multiple_files = 'ij'
 
 
 """"""""""""""" YCM Settings
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_python_binary_path = 'python'
 let g:ycm_global_ycm_extra_conf = '/home/aaron/.vim/ycm-confs/ycm_extra_conf.py'
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " get rid of prompt for running ycm_extra_conf
 " this presents a security risk (potentially) and could

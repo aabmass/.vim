@@ -13,6 +13,9 @@ Plugin 'tpope/vim-sensible'
 " auto close parenthesis, quotes, etc.
 Plugin 'jiangmiao/auto-pairs'
 
+" auto close tags, too
+Plugin 'alvan/vim-closetag'
+
 " switch between header and source (c/c++)
 Plugin 'a.vim'
 

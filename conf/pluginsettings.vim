@@ -81,6 +81,9 @@ let g:javascript_enable_domhtmlcss = 1
 " highlight jsx in regular .js files
 let g:jsx_ext_required = 0
 
+""""""""""""""" vim-closetag settings
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
+
 """"""""""""""" Gutentags settings
 " store all the tag files in this directory to avoid
 " creating tag files all over the fs

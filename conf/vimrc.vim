@@ -1,11 +1,3 @@
-"====================== General Config ==============================
-" general settings for vim go in here
-" this doesn't include settings for plugins
-source ~/.vim/conf/settings.vim
-
-" mappings go in here
-source ~/.vim/conf/mappings.vim
-
 "====================== Vundle Setup ==============================
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -26,3 +18,10 @@ filetype plugin indent on    " required
 "====================== Other setup ==============================
 " specific settings for plugins go in this file
 source ~/.vim/conf/pluginsettings.vim
+
+" mappings go in here
+source ~/.vim/conf/mappings.vim
+
+" this doesn't include settings for plugins
+source ~/.vim/conf/settings.vim
+

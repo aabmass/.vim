@@ -71,12 +71,17 @@ Plugin 'artur-shaik/vim-javacomplete2'
 
 " python stuff
 Plugin 'heavenshell/vim-pydocstring'
+Bundle "lepture/vim-jinja"
 " Plugin 'klen/python-mode'
+"
+" glsl
+Plugin 'tikhomirov/vim-glsl'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!
 Plugin 'flazz/vim-colorschemes'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'

@@ -43,7 +43,15 @@ set hid
 " use visual bell instead of annoying one
 set vb
 
-" fonts
+""""""""""""""" Themin' and Schemin'
+" need this to enable true color support
+set termguicolors
+
+" choose light or dark background for themes not setting it
+" set background=dark
+colorscheme solarized8_light_high
+
+""" fonts
 set guifont=Meslo\ LG\ M\ 11
 
 " some file watchers (webpack) don't detect changes unless this is set

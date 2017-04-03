@@ -2,12 +2,6 @@
 " This file has the plugins to be loaded by vundle. The settings
 " for the plugins go in conf/settingsplugins.vim
 
-""""""""""""""" Themin' and Schemin'
-" colorscheme monokai-chris
-set background=dark    " Setting dark mode
-colorscheme gruvbox
-" colorscheme Tomorrow-Night-Eighties
-
 """"""""""""""" airline settings
 " set powerline fonts true
 " turn this off if the terminal doesn't support it
@@ -19,6 +13,8 @@ let g:airline#extensions#tabline#enabled = 0
 " still scans everything
 let g:ctrlp_extensions = ['buffertag', 'mixed', 'undo']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+
 
 " this makes it so opening multiple files just puts them all
 " in their own buffer, not splitting

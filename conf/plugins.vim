@@ -85,4 +85,6 @@ Plugin 'lifepillar/vim-solarized8'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" need fugitive for airline with git branch
+Plugin 'tpope/vim-fugitive'
 Plugin 'fholgado/minibufexpl.vim'

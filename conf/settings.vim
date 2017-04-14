@@ -15,6 +15,11 @@ set textwidth=79    " break lines when 120 characters wide"
 
 set expandtab       " Expand TABs to spaces
 
+" use a separate directory for swap and backup files
+" this keeps annoying *.swp and ~ files away..
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+
 " specific tab settings for filetypes
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype html.handlebars setlocal ts=2 sts=2 sw=2
@@ -48,8 +53,9 @@ set vb
 set termguicolors
 
 " choose light or dark background for themes not setting it
-" set background=dark
-colorscheme solarized8_light_high
+set background=dark
+colorscheme gruvbox
+" colorscheme solarized8_light_high
 
 """ fonts
 set guifont=Meslo\ LG\ M\ 11

@@ -11,7 +11,11 @@ set shiftwidth=4    " Indents will have a width of 4
 
 set softtabstop=4   " Sets the number of columns for a TAB
 
-set textwidth=79    " break lines when 120 characters wide"
+set textwidth=80    " break lines when 120 characters wide"
+
+set formatoptions=1cjnq     " formatoptions. See :help formatoptions and
+                            " :help fo-table . These change how vim auto
+                            " formats text during editing
 
 set expandtab       " Expand TABs to spaces
 
@@ -32,7 +36,8 @@ set smartcase
 
 """ line numbering
 set number
-set relativenumber
+" not sure if I like relativenumbers still...
+" set relativenumber
 
 " also, see the mappings for making gj and gk work with this
 

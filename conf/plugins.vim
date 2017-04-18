@@ -13,6 +13,9 @@ Plugin 'tpope/vim-sensible'
 " auto close parenthesis, quotes, etc.
 Plugin 'jiangmiao/auto-pairs'
 
+" sort stuff!
+Plugin 'christoomey/vim-sort-motion'
+
 " auto close tags, too
 Plugin 'alvan/vim-closetag'
 
@@ -48,7 +51,8 @@ Plugin 'FooSoft/vim-argwrap'
 Plugin 'lervag/vimtex'
 
 " for TypeScript
-Plugin 'leafgarland/typescript-vim'
+" seeing if this fixes the fo issues..
+" Plugin 'leafgarland/typescript-vim'
 
 " for javascript
 Plugin 'pangloss/vim-javascript'
@@ -72,6 +76,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 " python stuff
 Plugin 'heavenshell/vim-pydocstring'
 Bundle "lepture/vim-jinja"
+Plugin 'Vimjas/vim-python-pep8-indent'
 " Plugin 'klen/python-mode'
 "
 " glsl

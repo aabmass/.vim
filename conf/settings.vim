@@ -59,7 +59,9 @@ set termguicolors
 
 " choose light or dark background for themes not setting it
 set background=dark
-colorscheme gruvbox
+" run silent! in case the theme isn't installed -- don't want
+" an error to be thrown and require user to press enter
+silent! colorscheme gruvbox
 " colorscheme solarized8_light_high
 
 """ fonts

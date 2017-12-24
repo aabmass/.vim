@@ -1,8 +1,11 @@
 *~
+autoload/plug.vim
 bundle/
+plugged/
 *.pyc
 *.swp
-
+swap/*
+backup/*
 .netrwhist
 vim.log
 

@@ -6,7 +6,7 @@
 " set powerline fonts true
 " turn this off if the terminal doesn't support it
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""" CtrlP settings
 " enable these extensions. Still looking for a better way to ignore from .gitignore. 'autoignore' extension

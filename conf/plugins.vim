@@ -1,95 +1,95 @@
-"====================== Vundle Plugins ==============================
+"====================== Vundle Plugs ==============================
 " This file has the plugins to be loaded by vundle. The settings
 " for the plugins go in pluginsettings.vim
 
 """" Install plugins with vundle here
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " base options from sensible and detecting indentation styles
-Plugin 'tpope/vim-sensible'
-" Plugin 'tpope/vim-sleuth'
+Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sleuth'
 
 " auto close parenthesis, quotes, etc.
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " sort stuff!
-Plugin 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-sort-motion'
 
 " auto close tags, too
-Plugin 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 
 " switch between header and source (c/c++)
-Plugin 'a.vim'
+Plug 'vim-scripts/a.vim'
 
 " YCM completions
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " Gutentags to generate tags on the go
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " tagbar
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " Syntastic syntax checking
-" Plugin 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 
 " snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " for fuzzy file searching
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 " hard to explain this one, see github
-Plugin 'FooSoft/vim-argwrap'
+Plug 'FooSoft/vim-argwrap'
 
 " for LaTeX
-Plugin 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
 " for TypeScript
 " seeing if this fixes the fo issues..
-" Plugin 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 
 " for javascript
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " for jsx in javascript
-Plugin 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 
 " for mustache templates (ember)
-Plugin 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars'
 
 " for Haskell
-Plugin 'neovimhaskell/haskell-vim'  " syntax + indentation
-Plugin 'eagletmt/neco-ghc'          " autocompletion
+Plug 'neovimhaskell/haskell-vim'  " syntax + indentation
+Plug 'eagletmt/neco-ghc'          " autocompletion
 
 " Open browser to view markdown when opening md file
-Plugin 'suan/vim-instant-markdown'
+Plug 'suan/vim-instant-markdown'
 
 " for java autocompletion
-Plugin 'artur-shaik/vim-javacomplete2'
+Plug 'artur-shaik/vim-javacomplete2'
 
 " python stuff
-Plugin 'heavenshell/vim-pydocstring'
-Bundle "lepture/vim-jinja"
-Plugin 'Vimjas/vim-python-pep8-indent'
-" Plugin 'klen/python-mode'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'klen/python-mode'
 "
 " glsl
-Plugin 'tikhomirov/vim-glsl'
+Plug 'tikhomirov/vim-glsl'
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
 " this may be excessively large!
-Plugin 'flazz/vim-colorschemes'
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
+Plug 'lifepillar/vim-solarized8'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " need fugitive for airline with git branch
-Plugin 'tpope/vim-fugitive'
-Plugin 'fholgado/minibufexpl.vim'
+Plug 'tpope/vim-fugitive'
+" Plug 'fholgado/minibufexpl.vim'

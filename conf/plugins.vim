@@ -1,10 +1,6 @@
-"====================== Vundle Plugs ==============================
-" This file has the plugins to be loaded by vundle. The settings
-" for the plugins go in pluginsettings.vim
-
-"""" Install plugins with vundle here
-" let Vundle manage Vundle, required
-Plug 'VundleVim/Vundle.vim'
+"====================== Vim Plug ==============================
+" This file has the plugins to be loaded by vim-plug. The settings for the
+" plugins go in pluginsettings.vim
 
 " base options from sensible and detecting indentation styles
 Plug 'tpope/vim-sensible'

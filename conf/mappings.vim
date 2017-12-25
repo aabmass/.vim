@@ -12,6 +12,10 @@ nmap <c-m-p> :CtrlPBuffer<cr>
 " mappings for a.vim
 map <leader>a :A!<cr>
 
+" fzf
+nmap <c-p> :Files<cr>
+nmap <c-t> :Files<cr>
+
 " nerdtree mappings
 map <leader>p :NERDTreeToggle<cr>
 

@@ -2,6 +2,15 @@
 " This file has the plugins to be loaded by vundle. The settings
 " for the plugins go in conf/settingsplugins.vim
 
+""""""""""""""" ALE settings
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'python': ['autopep8'],
+\}
+let g:ale_python_mypy_options='--strict-optional'
+
+" let g:ale_fix_on_save = 1
+
 """"""""""""""" airline settings
 " set powerline fonts true
 " turn this off if the terminal doesn't support it
@@ -76,6 +85,8 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:javascript_enable_domhtmlcss = 1
 " highlight jsx in regular .js files
 let g:jsx_ext_required = 0
+" Flow syntax
+let g:javascript_plugin_flow = 1
 
 """"""""""""""" vim-closetag settings
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"

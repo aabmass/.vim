@@ -3,7 +3,7 @@
 " plugins go in pluginsettings.vim
 
 " base options from sensible and detecting indentation styles
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
 " Plug 'tpope/vim-sleuth'
 
 " auto close parenthesis, quotes, etc.
@@ -27,8 +27,8 @@ Plug 'ludovicchabant/vim-gutentags'
 " tagbar
 Plug 'majutsushi/tagbar'
 
-" Syntastic syntax checking
-" Plug 'scrooloose/syntastic'
+" Linting
+Plug 'w0rp/ale'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -37,7 +37,10 @@ Plug 'honza/vim-snippets'
 Plug 'terryma/vim-multiple-cursors'
 
 " for fuzzy file searching
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'scrooloose/nerdtree'
 
 " hard to explain this one, see github
@@ -55,6 +58,9 @@ Plug 'pangloss/vim-javascript'
 
 " for jsx in javascript
 Plug 'mxw/vim-jsx'
+
+" Flow autocomplete
+Plug 'flowtype/vim-flow'
 
 " for mustache templates (ember)
 Plug 'mustache/vim-mustache-handlebars'

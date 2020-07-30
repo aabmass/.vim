@@ -3,13 +3,21 @@
 " for the plugins go in conf/settingsplugins.vim
 
 """"""""""""""" ALE settings
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
-\   'python': ['autopep8'],
+\   'python': ['black', 'isort'],
+\   'c': ['clang-format'],
+\   'cpp': ['clang-format'],
 \}
-let g:ale_python_mypy_options='--strict-optional'
 
-" let g:ale_fix_on_save = 1
+let g:ale_python_mypy_options='--strict-optional'
+" let g:ale_c_clangformat_options='-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
+
+let g:ale_fix_on_save = 1
 
 """"""""""""""" airline settings
 " set powerline fonts true
@@ -30,24 +38,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 let g:ctrlp_open_multiple_files = 'ij'
 
 
-""""""""""""""" YCM Settings
-" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-let g:ycm_python_binary_path = 'python'
-let g:ycm_global_ycm_extra_conf = '/home/aaron/.vim/ycm-confs/ycm_extra_conf.py'
-
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" get rid of prompt for running ycm_extra_conf
-" this presents a security risk (potentially) and could
-" run malicious code
-let g:ycm_confirm_extra_conf = 0
-
-" work with neco-ghc haskell omnicompletion
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-
-""""""""""""""" vim-javacomplete2 Settings
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 """"""""""""""" UltiSnips Settings
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
@@ -55,9 +45,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 " autocmds for using snippets from other languages
 autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
-
-" for more info on YCM and UltiSnips together, see:
-" http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme
 
 """"""""""""""" GitGutter settings
 set updatetime=250
@@ -77,6 +64,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_java_checkers = []
 
 " language specifics
 let g:syntastic_python_python_exec = '/usr/bin/python3'
@@ -107,3 +95,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 """"""""""""""" py-docstring settings
 " override default binding..
 nmap <silent> <C-_> <Plug>(pydocstring)
+
+""""""""""""""" coc.vim (autocomplete) settings
+" installed extensions
+let g:coc_global_extensions = ['coc-python', 'coc-json']

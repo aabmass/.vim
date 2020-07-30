@@ -69,3 +69,11 @@ set guifont=Meslo\ LG\ M\ 11
 
 " some file watchers (webpack) don't detect changes unless this is set
 set backupcopy=yes
+
+""" recommended for coc.vim (autocomplete)
+set hidden
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+

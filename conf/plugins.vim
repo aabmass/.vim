@@ -18,9 +18,6 @@ Plug 'alvan/vim-closetag'
 " switch between header and source (c/c++)
 Plug 'vim-scripts/a.vim'
 
-" YCM completions
-Plug 'Valloric/YouCompleteMe'
-
 " Gutentags to generate tags on the go
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -28,7 +25,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 " Linting
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
+
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -49,40 +47,28 @@ Plug 'FooSoft/vim-argwrap'
 " for LaTeX
 Plug 'lervag/vimtex'
 
-" for TypeScript
-" seeing if this fixes the fo issues..
-" Plug 'leafgarland/typescript-vim'
-
 " for javascript
 Plug 'pangloss/vim-javascript'
 
 " for jsx in javascript
 Plug 'mxw/vim-jsx'
 
-" Flow autocomplete
-Plug 'flowtype/vim-flow'
-
-" for mustache templates (ember)
-Plug 'mustache/vim-mustache-handlebars'
-
-" for Haskell
-Plug 'neovimhaskell/haskell-vim'  " syntax + indentation
-Plug 'eagletmt/neco-ghc'          " autocompletion
+"" Flow autocomplete
+"Plug 'flowtype/vim-flow'
 
 " Open browser to view markdown when opening md file
 Plug 'suan/vim-instant-markdown'
-
-" for java autocompletion
-Plug 'artur-shaik/vim-javacomplete2'
 
 " python stuff
 Plug 'heavenshell/vim-pydocstring'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'klen/python-mode'
-"
+
 " glsl
 Plug 'tikhomirov/vim-glsl'
+
+" General autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """"" Themeing stuffs
 " downloads all/most of the colorschemes available
@@ -94,4 +80,4 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " need fugitive for airline with git branch
 Plug 'tpope/vim-fugitive'
-" Plug 'fholgado/minibufexpl.vim'
+

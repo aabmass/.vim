@@ -56,3 +56,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" toggle diagnostics pane
+nnoremap <leader>d :CocDiagnostics<cr>
+nnoremap <leader>D :lclose<cr>
+
+" run a commond (like Ctrl-Shift-p in vscode)
+nnoremap <leader>c :CocCommand<cr>
+
